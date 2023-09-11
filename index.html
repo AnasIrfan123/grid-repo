@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: 200px 200px 200px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */ 
+            /* 1 he kam h 2no methad ka bs width ka farq ha  */
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+            /* is minmax s responsive hota grid */
+            grid-gap: 20px;
+            grid-auto-rows: minmax(100px,auto);
+            grid-auto-columns: minmax(50px, auto);
+            /* column-gap: 120px;
+            row-gap: 120px; */ 
+            /* is property s row or column me gap a sakta ha  */
+        }
+
+        .items{
+            background-color: lightcoral;
+            border: 3px green solid;
+            border-radius: 3px;
+        }
+
+        #item-2{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        #item-1{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .item-1-container{
+            display: grid;
+        }
+        .nested-item{
+            border: 3px greenyellow solid;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item-1-container" id="item-1">
+            <div class="nested-item">dabbe me dabba 1</div>
+            <div class="nested-item">dabbe me dabba 2</div>
+            <div class="nested-item">dabbe me dabba 3</div>
+        </div>
+        <div class="items" id="item-2">dabba 2</div>
+        <div class="items">dabba 3</div>
+        <div class="items">dabba 4</div>
+        <div class="items">dabba 5</div>
+    </div>
+</body>
+</html>
+<!-- flexbox is one-dimensional (1 one-dimensional layout hota ha)
+css grid is two-dimensional (2d layout hota ha) -->
+
+<!-- display container ko hmne 1 parent grid baya h or items jo en wo is container k 
+ander dekne waly hn main elements or baqi childs hen -->
+<!-- grid templa colums sy hm 1 jitny boxes hn unko hm 1 column k andar divide krlebgy
+kch columns k andr or phr 200 hundred pixels size k column ban jayengy grid teplate colum container par lgti ha 
+agr ap jo bh width dogy wo item par lago hogi or is ka short trick bh ha 1fr mtlb pixel me (mazed short trick ha iski
+gird template columns repeat(3, 1fr)ap k pas 5 dabbe hn or 1st me ktny show krwane ha to ap value or koma dekar
+size likh doge kuch istarha (3, 1fr)) 
+ye wali example responsive grid ki ha-->
+
+
+<!-- example 2 grid harry -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .container{
+        display: grid;
+        /* grid-template-columns: 300px 100px 100px; */
+        /* grid-template-columns: 300px auto 100px; */
+        /* grid-template-columns: 1fr 4fr 1fr; */
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 2rem;
+    }
+    .item{
+        /* height: 100px;
+        width: 100px; */
+        background-color: red;
+        border: 2px solid black;
+        margin: 3px;
+        padding: 15px 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is Item-1</div>
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+        <div class="item">This is Item-1</div>
+        <div class="item">This is Item-2</div>
+        <div class="item">This is Item-3</div>
+        <div class="item">This is Item-4</div>
+        <div class="item">This is Item-5</div>
+        <div class="item">This is Item-6</div>
+        <div class="item">This is Item-7</div>
+        <div class="item">This is Item-8</div>
+        <div class="item">This is Item-9</div>
+    </div>
+</body>
+</html> -->
